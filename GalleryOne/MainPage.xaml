@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="GalleryOne.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- User Interface (UI): GalleryOne 1.0 -->
+    <ScrollViewer>
+
+        <StackPanel Background="LightSkyBlue" Padding="40">
+
+        <!-- Title -->
+        <TextBlock Text="GalleryOne" FontSize="50" />
+
+            <!-- Gallery -->
+        <ListBox Name="boxGallery" Height="280">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding}" Height="50" Width="50" Margin="5" />
+                        <Button Content="Delete"  FontSize="30" Click="DeleteButton_Click"  RenderTransformOrigin="0.583,0.75" Margin="3"  Height="66" Width="185" />
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Add -->
+        <!-- Add -->
+
+        <!-- Display selected image -->
+        <Image Name="displayImage" Stretch="Uniform" Margin="0 20 0 0" />
+        <Button Content="Add image"  FontSize="30" Padding="20 10 20 10" Click="AddButton_Click" />
+         <Button Content="Save" FontSize="30" Padding="20 10 20 10" Click="SaveButton_Click" />
+
+        </StackPanel>
+        </ScrollViewer>
+
+</Page>
